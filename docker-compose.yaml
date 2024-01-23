@@ -1,0 +1,15 @@
+version: '1'
+services:
+  exampletry:
+    build: ./exampletrydoc
+    volumes:
+      - /media/neer/devn/dockerTry/socket.sock:/media/neer/devn/dockerTry
+    # expose:
+    #   - 8090
+  nginx:
+    build: ./nginx
+    volumes:
+      - /media/neer/devn/dockerTry/socket.sock:/media/neer/devn/dockerTry
+
+    ports:
+      - "90:90"
