@@ -2,6 +2,10 @@
 
 ### This demo project features a containerized deployment with two images:
 
+Note: 
+- The 'main' branch contains configurations for a shared volume that utilizes the host machine.
+- The 'docker-Unix-socket' branch, on the other hand, does not involve a shared volume with the host machine; instead, all configurations are contained within the Docker container.
+
 ## Django Image:
 
 - Contains the Django application.
