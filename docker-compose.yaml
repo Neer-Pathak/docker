@@ -3,13 +3,12 @@ services:
   exampletry:
     build: ./exampletrydoc
     volumes:
-      - /media/neer/devn/dockerTry/socket.sock:/media/neer/devn/dockerTry
-    # expose:
-    #   - 8090
+      - /tmp
+
   nginx:
     build: ./nginx
-    volumes:
-      - /media/neer/devn/dockerTry/socket.sock:/media/neer/devn/dockerTry
+    volumes_from:
+      - exampletry
 
     ports:
       - "90:90"

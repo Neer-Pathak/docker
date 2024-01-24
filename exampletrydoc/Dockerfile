@@ -1,4 +1,5 @@
 # Use the official Python image with version 3.10
+# FROM ubuntu:latest
 FROM python:3.10-slim-buster
 
 # FROM python:3.10.0a6-alpine3.13
@@ -12,4 +13,4 @@ ADD . /app
 RUN pip3 install -r requirements.txt
 
 
-CMD ["uwsgi", "app.ini"]
+CMD ["uwsgi", "app.ini", "--thunder-lock"]
